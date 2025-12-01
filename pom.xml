@@ -56,5 +56,10 @@
             </plugin>
         </plugins>
     </build>
-
+    <distributionManagement>
+        <repository>
+            <id>demo-releases</id>
+            <url>http://3.131.160.15:8081/repository/demo-releases/</url>
+        </repository>
+    </distributionManagement>
 </project>
