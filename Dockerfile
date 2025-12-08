@@ -26,10 +26,10 @@ WORKDIR /app
 RUN mkdir /app/logs
 
 # Copy the packaged jar file from the build stage
-COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar  /app/demo-0.0.1-SNAPSHOT.jar
+COPY --from=build /app/target/demo-0.0.1.jar  /app/demo-0.0.1.jar
 
 # Expose the application port
 EXPOSE 8081
 
 # Run the application
-CMD ["sh","-c","java -jar demo-0.0.1-SNAPSHOT.jar > /app/logs/app.log 2>&1"]
+CMD ["sh","-c","java -jar demo-0.0.1.jar > /app/logs/app.log 2>&1"]
